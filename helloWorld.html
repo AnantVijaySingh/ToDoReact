@@ -3,6 +3,8 @@
 <head>
 	<title>Hello React</title>
 	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="material.css">
+	<script type="text/javascript" src="material.js"></script>
 	<script src="node_modules/react/dist/react.js"></script>
 	<script src="node_modules/react-dom/dist/react-dom.js"></script>
 	<!-- <script src="https://unpkg.com/react@15/dist/react.js"></script> -->
@@ -16,28 +18,47 @@
 </div>
 
 <script type="text/babel">
-	var Component = React.createClass({
+
+var TextAreaCounter = React.createClass({
 	propTypes: {
-		name: React.PropTypes.string.isRequired
+		defaultValue: React.PropTypes.string
 	},
+
 	getDefaultProps: function() {
 		return {
-		middleName: '',
-		address: 'n/a'
-		}
+			text: ''
+		};
 	},
-		render: function() {
-			return React.DOM.span(null, "My first name is " + this.props.name + " middle name is " + this.props.middleName + " my last name is " + this.props.lastName + " and my address is " + this.props.address);
-		}
-	});
 
-	ReactDOM.render(
-		React.createElement(Component, {
-			name: "Anant",
-			lastName: "Singh",
-		}),
-		document.getElementById("app")
-	);
+	getInitialState: function() {
+		return {
+			text: this.props.defaultValue
+		};
+	},
+
+	_textChange: function(ev) {
+		this.setState({
+			text: ev.target.value
+		});
+	},
+
+	render: function() {
+		return React.DOM.div(null,
+			React.DOM.textarea({
+			value: this.state.text,
+			onChange: this._textChange,
+			}),
+			React.DOM.h3(null,this.state.text.length)
+			);
+	}
+});
+
+ReactDOM.render(
+		React.createElement(TextAreaCounter, {
+		defaultValue: "Anant"
+	}),
+	document.getElementById("app")
+);
 
 
 </script>

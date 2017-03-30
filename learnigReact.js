@@ -52,7 +52,10 @@
 
 		var Component = React.createClass({
 	propTypes: {
-		name: React.PropTypes.string.isRequired
+		name: React.PropTypes.string.isRequired,
+		middleName: React.PropTypes.string,
+		lastName: React.PropTypes.string.isRequired,
+		address: React.PropTypes.string
 	},
 	getDefaultProps: function() {
 		return {
@@ -69,6 +72,48 @@
 		React.createElement(Component, {
 			name: "Anant",
 			lastName: "Singh",
+		}),
+		document.getElementById("app")
+	);
+
+	// --------------------------------------------- Statefulness with event handling
+	var TextAreaCounter = React.createClass({
+		propTypes: {
+			defaultValue: React.PropTypes.string
+		},
+
+		getDefaultProps: function() {
+			return {
+				text: ''
+			};
+		},
+
+		getInitialState: function() {
+			return {
+				text: this.props.defaultValue
+			};
+		},
+
+		_textChange: function(ev) {
+			this.setState({
+				text: ev.target.value
+			});
+		},
+
+		render: function() {
+			return React.DOM.div(null,
+				React.DOM.textarea({
+				value: this.state.text,
+				onChange: this._textChange,
+				}),
+				React.DOM.h3(null,this.state.text.length)
+				);
+		}
+	});
+
+	ReactDOM.render(
+			React.createElement(TextAreaCounter, {
+			defaultValue: "Anant"
 		}),
 		document.getElementById("app")
 	);
