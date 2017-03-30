@@ -16,10 +16,30 @@
 </div>
 
 <script type="text/babel">
+	var Component = React.createClass({
+	propTypes: {
+		name: React.PropTypes.string.isRequired
+	},
+	getDefaultProps: function() {
+		return {
+		middleName: '',
+		address: 'n/a'
+		}
+	},
+		render: function() {
+			return React.DOM.span(null, "My first name is " + this.props.name + " middle name is " + this.props.middleName + " my last name is " + this.props.lastName + " and my address is " + this.props.address);
+		}
+	});
+
 	ReactDOM.render(
-		React.DOM.h1(null,"Hello React!"),
+		React.createElement(Component, {
+			name: "Anant",
+			lastName: "Singh",
+		}),
 		document.getElementById("app")
-  		);
+	);
+
+
 </script>
 
 </body>
