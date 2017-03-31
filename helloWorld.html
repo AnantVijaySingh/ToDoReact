@@ -17,17 +17,25 @@
 	<!-- My app renders here -->
 </div>
 
-<script type="text/babel">
+<script>
+
+var logMixin = {
+	_log: function(methodName, args) {
+          console.log(this.name + '::' + methodName, args);
+        },
+
+	componentWillUpdate: function() {this._log('componentWillUpdate',  arguments);},
+	componentDidUpdate: function() {this._log('componentDidUpdate', arguments);},
+};
 
 var TextAreaCounter = React.createClass({
+
+	name: 'TextAreaCounter',
+
+	mixins: [logMixin],
+
 	propTypes: {
 		defaultValue: React.PropTypes.string
-	},
-
-	getDefaultProps: function() {
-		return {
-			text: ''
-		};
 	},
 
 	getInitialState: function() {
@@ -40,6 +48,13 @@ var TextAreaCounter = React.createClass({
 		this.setState({
 			text: ev.target.value
 		});
+	},
+
+	componentDidUpdate: function(oldProps, oldState) { 
+		if(this.state.text.length > 5) {
+			this.replaceState(oldState);
+			console.log('testing');
+		}
 	},
 
 	render: function() {
@@ -55,11 +70,10 @@ var TextAreaCounter = React.createClass({
 
 ReactDOM.render(
 		React.createElement(TextAreaCounter, {
-		defaultValue: "Anant"
+		defaultValue: "Anant",
 	}),
 	document.getElementById("app")
 );
-
 
 </script>
 

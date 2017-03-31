@@ -76,8 +76,9 @@
 		document.getElementById("app")
 	);
 
-	// --------------------------------------------- Statefulness with event handling
+	// --------------------------------------------- Statefulness with event handling and lifecycle methods to add conditions on redenering of compotnents
 	var TextAreaCounter = React.createClass({
+
 		propTypes: {
 			defaultValue: React.PropTypes.string
 		},
@@ -100,6 +101,20 @@
 			});
 		},
 
+		_log: function(methodName, args) {
+			console.log('componentDidUpdate', arguments)
+		},
+
+		// this method is called after the render function and is passed the old prop and state value
+		// it is being used to make sure the input is never more than 5 characters, if it is, the component reverts to the old values
+		// ***** replaceState unlike setState overwrites the does not merge the properties but overwrites everything *****
+
+		componentDidUpdate: function(oldProps, oldState) {  
+			if(this.state.text.length > 5) {
+				this.replaceState(oldState);
+			}
+		},
+
 		render: function() {
 			return React.DOM.div(null,
 				React.DOM.textarea({
@@ -117,3 +132,68 @@
 		}),
 		document.getElementById("app")
 	);
+
+
+	// --------------------------------------------------- Log function
+
+	_log: function(methodName, args) {
+		console.log(methodName, args);
+	}
+
+	// ------------------------------------------------------ Mixins
+
+	var logMixin = {
+	_log: function(methodName, args) {
+          console.log(this.name + '::' + methodName, args);
+        },
+
+	componentWillUpdate: function() {this._log('componentWillUpdate',  arguments);},
+	componentDidUpdate: function() {this._log('componentDidUpdate', arguments);},
+};
+
+var TextAreaCounter = React.createClass({
+
+	name: 'TextAreaCounter',
+
+	mixins: [logMixin],
+
+	propTypes: {
+		defaultValue: React.PropTypes.string
+	},
+
+	getInitialState: function() {
+		return {
+			text: this.props.defaultValue
+		};
+	},
+
+	_textChange: function(ev) {
+		this.setState({
+			text: ev.target.value
+		});
+	},
+
+	componentDidUpdate: function(oldProps, oldState) { 
+		if(this.state.text.length > 5) {
+			this.replaceState(oldState);
+			console.log('testing');
+		}
+	},
+
+	render: function() {
+		return React.DOM.div(null,
+			React.DOM.textarea({
+			value: this.state.text,
+			onChange: this._textChange,
+			}),
+			React.DOM.h3(null,this.state.text.length)
+			);
+	}
+});
+
+ReactDOM.render(
+		React.createElement(TextAreaCounter, {
+		defaultValue: "Anant",
+	}),
+	document.getElementById("app")
+);
