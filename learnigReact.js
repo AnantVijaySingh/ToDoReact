@@ -197,3 +197,161 @@ ReactDOM.render(
 	}),
 	document.getElementById("app")
 );
+
+// --------------------------------------- Child Elements
+
+var logMixin = {
+	_log: function(methodName, args) {
+          console.log(this.name + '::' + methodName, args);
+        },
+
+	componentWillUpdate: function() {this._log('componentWillUpdate',  arguments);},
+	componentDidUpdate: function() {this._log('componentDidUpdate', arguments);},
+};
+
+var Counter = React.createClass({
+	name: 'Counter',
+	mixins: [logMixin],
+	propTypes: {
+			count: React.PropTypes.number.isRequired,
+	},
+	render: function() {
+			return React.DOM.span(null, this.props.count);
+	}
+});
+
+var TextAreaCounter = React.createClass({
+
+	name: 'TextAreaCounter',
+
+	mixins: [logMixin],
+
+	propTypes: {
+		defaultValue: React.PropTypes.string
+	},
+
+	getInitialState: function() {
+		return {
+			text: this.props.defaultValue
+		};
+	},
+
+	_textChange: function(ev) {
+		this.setState({
+			text: ev.target.value
+		});
+	},
+
+	componentDidUpdate: function(oldProps, oldState) { 
+		if(this.state.text.length > 5) {
+			this.replaceState(oldState);
+			console.log('testing');
+		}
+	},
+
+	render: function() {
+		var counter = null;
+		if (this.state.text.length > 0) {
+			counter = React.DOM.h3(null,
+				React.createElement(Counter, {
+					count: this.state.text.length,
+				}))
+		};
+		return React.DOM.div(null,
+			React.DOM.textarea({
+				value: this.state.text,
+				onChange: this._textChange,
+			}),
+			counter
+		);
+	}
+});
+
+ReactDOM.render(
+		React.createElement(TextAreaCounter, {
+		defaultValue: "Anant",
+	}),
+	document.getElementById("app")
+);
+
+// ------------------------------------ Check if there is a need to run render function again through shouldComponentUpdate function
+
+var logMixin = {
+	_log: function(methodName, args) {
+          console.log(this.name + '::' + methodName, args);
+        },
+
+	componentWillUpdate: function() {this._log('componentWillUpdate',  arguments);},
+	componentDidUpdate: function() {this._log('componentDidUpdate', arguments);},
+};
+
+var Counter = React.createClass({
+	name: 'Counter',
+	mixins: [logMixin],
+	propTypes: {
+			count: React.PropTypes.number.isRequired,
+	},
+
+	shouldComponentUpdate: function(nextProps, nextState) {
+          console.log(this.name + '::shouldComponentUpdate()');
+          return nextProps.count !== this.props.count;
+    },
+
+	render: function() {
+			return React.DOM.span(null, this.props.count);
+	}
+});
+
+var TextAreaCounter = React.createClass({
+
+	name: 'TextAreaCounter',
+
+	mixins: [logMixin],
+
+	propTypes: {
+		defaultValue: React.PropTypes.string
+	},
+
+	getInitialState: function() {
+		return {
+			text: this.props.defaultValue
+		};
+	},
+
+	_textChange: function(ev) {
+		this.setState({
+			text: ev.target.value
+		});
+	},
+
+	componentDidUpdate: function(oldProps, oldState) { 
+		if(this.state.text.length > 5) {
+			this.replaceState(oldState);
+			console.log('testing');
+		}
+	},
+
+	render: function() {
+		var counter = null;
+		if (this.state.text.length > 0) {
+			counter = React.DOM.h3(null,
+				React.createElement(Counter, {
+					count: this.state.text.length,
+				}))
+		};
+		return React.DOM.div(null,
+			React.DOM.textarea({
+				value: this.state.text,
+				onChange: this._textChange,
+			}),
+			counter
+		);
+	}
+});
+
+ReactDOM.render(
+		React.createElement(TextAreaCounter, {
+		defaultValue: "Anant",
+	}),
+	document.getElementById("app")
+);
