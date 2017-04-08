@@ -5,8 +5,8 @@ import ReactDOM from 'react-dom';
 import Logo from './components/Logo';
 
 ReactDOM.render(
-  <h1>
+  <button className="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
     <Logo /> Welcome to The App!
-  </h1>,
+  </button>,
   document.getElementById('app')
 );

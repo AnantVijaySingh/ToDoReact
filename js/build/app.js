@@ -15,8 +15,8 @@ var _Logo2 = _interopRequireDefault(_Logo);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 _reactDom2.default.render(_react2.default.createElement(
-  'h1',
-  null,
+  'button',
+  { className: 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect' },
   _react2.default.createElement(_Logo2.default, null),
   ' Welcome to The App!'
 ), document.getElementById('app'));
