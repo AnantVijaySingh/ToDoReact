@@ -15,8 +15,7 @@ class SearchBar extends React.Component {
 			          <i className="material-icons">search</i>
 			        </label>
 			        <div className="mdl-textfield__expandable-holder">
-			          <input className="mdl-textfield__input" type="text" name="sample" id="fixed-header-drawer-exp">
-			          </input>
+			          <input className="mdl-textfield__input" type="text" name="sample" id="fixed-header-drawer-exp"></input>
 			        </div>
 			      </div>
 			    </div>

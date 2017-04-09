@@ -1,0 +1,12 @@
+.mdl-layout__header, .mdl-layout__drawer-button{
+/*	background-color: white;*/
+	color: #000000;
+}
+
+.mdl-layout__header-row .mdl-navigation__link, .mdl-layout__header .mdl-layout__drawer-button{
+	color: #0D47A1;
+}
+
+.mdl-layout__header-row{
+	padding: 0px 40px 0px 40px;
+}

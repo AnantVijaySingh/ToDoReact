@@ -8,7 +8,7 @@ var _reactDom = require('react-dom');
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _material = require('./components/material.js');
+var _material = require('./components/material');
 
 var _material2 = _interopRequireDefault(_material);
 

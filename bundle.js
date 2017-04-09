@@ -191,7 +191,7 @@ var _reactDom = require('react-dom');
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _material = require('./components/material.js');
+var _material = require('./components/material');
 
 var _material2 = _interopRequireDefault(_material);
 
@@ -215,7 +215,7 @@ _react2.default.createElement(
   _react2.default.createElement(_SearchBar2.default, null)
 ), document.getElementById('app'));
 // import { Badge, Card, Chip, DataTable, Dialog, Footer, Grid, Icon, Layout, List, Snackbar, Tabs, utils } from 'react-mdl';
-},{"./components/Logo":3,"./components/SearchBar":4,"./components/material.js":5,"react":186,"react-dom":6}],3:[function(require,module,exports){
+},{"./components/Logo":3,"./components/SearchBar":4,"./components/material":5,"react":186,"react-dom":6}],3:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
