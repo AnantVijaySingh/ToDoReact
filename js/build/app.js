@@ -8,15 +8,27 @@ var _reactDom = require('react-dom');
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
+var _material = require('./components/material.js');
+
+var _material2 = _interopRequireDefault(_material);
+
 var _Logo = require('./components/Logo');
 
 var _Logo2 = _interopRequireDefault(_Logo);
 
+var _SearchBar = require('./components/SearchBar');
+
+var _SearchBar2 = _interopRequireDefault(_SearchBar);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-_reactDom2.default.render(_react2.default.createElement(
-  'button',
-  { className: 'mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect' },
-  _react2.default.createElement(_Logo2.default, null),
-  ' Welcome to The App!'
+_reactDom2.default.render(
+// <button className="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+//   <Logo /> Welcome to The App!
+// </button>,
+_react2.default.createElement(
+  'div',
+  { id: 'top' },
+  _react2.default.createElement(_SearchBar2.default, null)
 ), document.getElementById('app'));
+// import { Badge, Card, Chip, DataTable, Dialog, Footer, Grid, Icon, Layout, List, Snackbar, Tabs, utils } from 'react-mdl';
