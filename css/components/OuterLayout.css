@@ -1,3 +1,8 @@
+#appHeader, #appHeader .mdl-layout__header {
+	background-color: transparent;
+	color: #145AFF;
+}
+
 .mdl-layout__header, .mdl-layout__drawer-button{
 /*	background-color: white;*/
 	color: #000000;

@@ -1,3 +1,15 @@
+.Logo {
+  background-image: url('images/react-logo.svg');
+  background-size: cover;
+  display: inline-block;
+  height: 50px;
+  vertical-align: middle;
+  width: 50px;
+}#appHeader, #appHeader .mdl-layout__header {
+	background-color: transparent;
+	color: #145AFF;
+}
+
 .mdl-layout__header, .mdl-layout__drawer-button{
 /*	background-color: white;*/
 	color: #000000;
@@ -9,13 +21,18 @@
 
 .mdl-layout__header-row{
 	padding: 0px 40px 0px 40px;
-}.Logo {
-  background-image: url('images/react-logo.svg');
-  background-size: cover;
-  display: inline-block;
-  height: 50px;
-  vertical-align: middle;
-  width: 50px;
+}#appHeader, #appHeader .mdl-layout__header {
+	background-color: #00C1A5;
+	color: #E0E4E9;
+	font-size: 1.5em;
+}
+
+#appHeader .mdl-layout-title {
+	font-size: 30px;
+}
+
+#appHeader .mdl-layout__header-row {
+	margin: 0px auto;
 }/**
  * material-design-lite - Material Design Components in CSS, JS and HTML
  * @version v1.2.1

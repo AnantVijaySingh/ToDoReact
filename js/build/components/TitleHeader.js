@@ -18,27 +18,39 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var SearchBar = function (_React$Component) {
-	_inherits(SearchBar, _React$Component);
+var TitleHeader = function (_React$Component) {
+	_inherits(TitleHeader, _React$Component);
 
-	function SearchBar() {
-		_classCallCheck(this, SearchBar);
+	function TitleHeader() {
+		_classCallCheck(this, TitleHeader);
 
-		return _possibleConstructorReturn(this, (SearchBar.__proto__ || Object.getPrototypeOf(SearchBar)).apply(this, arguments));
+		return _possibleConstructorReturn(this, (TitleHeader.__proto__ || Object.getPrototypeOf(TitleHeader)).apply(this, arguments));
 	}
 
-	_createClass(SearchBar, [{
+	_createClass(TitleHeader, [{
 		key: "render",
 		value: function render() {
 			return _react2.default.createElement(
-				"div",
-				{ className: "mdl-grid" },
-				_react2.default.createElement("div", { className: "mdl-cell mdl-cell--8-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone \r mdl-cell--2-offset-desktop mdl-cell-1--offset-tablet", id: "SearchBarGrid" })
+				"header",
+				{ className: "mdl-layout__header mdl-layout__header--transparent", id: "appHeader" },
+				_react2.default.createElement(
+					"div",
+					{ className: "mdl-layout__header-row" },
+					_react2.default.createElement(
+						"span",
+						{ className: "mdl-layout-title" },
+						_react2.default.createElement(
+							"b",
+							null,
+							"FACTUM"
+						)
+					)
+				)
 			);
 		}
 	}]);
 
-	return SearchBar;
+	return TitleHeader;
 }(_react2.default.Component);
 
-exports.default = SearchBar;
+exports.default = TitleHeader;
