@@ -8,6 +8,7 @@ import Logo from './components/Logo';
 import OuterLayout from './components/OuterLayout';
 import MainContent from './components/MainContent';
 import TitleHeader from './components/TitleHeader';
+import TaskBar from './components/TaskBar';
 
 ReactDOM.render(
 
@@ -18,7 +19,9 @@ ReactDOM.render(
   <div id="top">
   	<OuterLayout>
   		<TitleHeader></TitleHeader>
-  		<MainContent></MainContent>
+  		<MainContent>
+  			<TaskBar></TaskBar>
+  		</MainContent>
   	</OuterLayout>
   </div>,
   document.getElementById('app')

@@ -18,31 +18,27 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var MainContent = function (_React$Component) {
-	_inherits(MainContent, _React$Component);
+var TaskBar = function (_React$Component) {
+	_inherits(TaskBar, _React$Component);
 
-	function MainContent() {
-		_classCallCheck(this, MainContent);
+	function TaskBar() {
+		_classCallCheck(this, TaskBar);
 
-		return _possibleConstructorReturn(this, (MainContent.__proto__ || Object.getPrototypeOf(MainContent)).apply(this, arguments));
+		return _possibleConstructorReturn(this, (TaskBar.__proto__ || Object.getPrototypeOf(TaskBar)).apply(this, arguments));
 	}
 
-	_createClass(MainContent, [{
+	_createClass(TaskBar, [{
 		key: "render",
 		value: function render() {
 			return _react2.default.createElement(
-				"main",
-				{ className: "mdl-layout__content" },
-				_react2.default.createElement(
-					"div",
-					{ className: "mdl-grid", id: "pageContent" },
-					this.props.children
-				)
+				"div",
+				{ className: "mdl-cell mdl-cell--6-col mdl-cell--8-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone \r mdl-cell--2-offset-desktop mdl-cell--1-offset-tablet", id: "TaskBar" },
+				"Testing..."
 			);
 		}
 	}]);
 
-	return MainContent;
+	return TaskBar;
 }(_react2.default.Component);
 
-exports.default = MainContent;
+exports.default = TaskBar;

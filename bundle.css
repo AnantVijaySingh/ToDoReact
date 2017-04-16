@@ -5,12 +5,7 @@
   height: 50px;
   vertical-align: middle;
   width: 50px;
-}#appHeader, #appHeader .mdl-layout__header {
-	background-color: transparent;
-	color: #145AFF;
-}
-
-.mdl-layout__header, .mdl-layout__drawer-button{
+}.mdl-layout__header, .mdl-layout__drawer-button{
 /*	background-color: white;*/
 	color: #000000;
 }

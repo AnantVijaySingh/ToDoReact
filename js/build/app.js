@@ -28,8 +28,13 @@ var _TitleHeader = require('./components/TitleHeader');
 
 var _TitleHeader2 = _interopRequireDefault(_TitleHeader);
 
+var _TaskBar = require('./components/TaskBar');
+
+var _TaskBar2 = _interopRequireDefault(_TaskBar);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+// import { Badge, Card, Chip, DataTable, Dialog, Footer, Grid, Icon, Layout, List, Snackbar, Tabs, utils } from 'react-mdl';
 _reactDom2.default.render(
 
 // <button className="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
@@ -43,7 +48,10 @@ _react2.default.createElement(
     _OuterLayout2.default,
     null,
     _react2.default.createElement(_TitleHeader2.default, null),
-    _react2.default.createElement(_MainContent2.default, null)
+    _react2.default.createElement(
+      _MainContent2.default,
+      null,
+      _react2.default.createElement(_TaskBar2.default, null)
+    )
   )
 ), document.getElementById('app'));
-// import { Badge, Card, Chip, DataTable, Dialog, Footer, Grid, Icon, Layout, List, Snackbar, Tabs, utils } from 'react-mdl';
