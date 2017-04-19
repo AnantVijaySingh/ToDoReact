@@ -1,7 +1,7 @@
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+	value: true
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -18,28 +18,27 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var OuterLayout = function (_React$Component) {
-  _inherits(OuterLayout, _React$Component);
+var TaskTextBar = function (_React$Component) {
+	_inherits(TaskTextBar, _React$Component);
 
-  function OuterLayout() {
-    _classCallCheck(this, OuterLayout);
+	function TaskTextBar() {
+		_classCallCheck(this, TaskTextBar);
 
-    return _possibleConstructorReturn(this, (OuterLayout.__proto__ || Object.getPrototypeOf(OuterLayout)).apply(this, arguments));
-  }
+		return _possibleConstructorReturn(this, (TaskTextBar.__proto__ || Object.getPrototypeOf(TaskTextBar)).apply(this, arguments));
+	}
 
-  _createClass(OuterLayout, [{
-    key: 'render',
-    value: function render() {
-      {/* Always shows a header, even in smaller screens */}
-      return _react2.default.createElement(
-        'div',
-        { className: 'mdl-layout mdl-js-layout  mdl-layout--fixed-header', id: 'allLayout' },
-        this.props.children
-      );
-    }
-  }]);
+	_createClass(TaskTextBar, [{
+		key: 'render',
+		value: function render() {
+			return _react2.default.createElement(
+				'textarea',
+				null,
+				'Task . . .'
+			);
+		}
+	}]);
 
-  return OuterLayout;
+	return TaskTextBar;
 }(_react2.default.Component);
 
-exports.default = OuterLayout;
+exports.default = TaskTextBar;

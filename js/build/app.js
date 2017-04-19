@@ -32,7 +32,28 @@ var _TaskBar = require('./components/TaskBar');
 
 var _TaskBar2 = _interopRequireDefault(_TaskBar);
 
+var _TaskTextBar = require('./components/TaskTextBar');
+
+var _TaskTextBar2 = _interopRequireDefault(_TaskTextBar);
+
+var _TrialMain = require('./components/TrialMain');
+
+var _TrialMain2 = _interopRequireDefault(_TrialMain);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// ReactDOM.render(
+
+//   // <button className="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+//   //   <Logo /> Welcome to The App!
+//   // </button>,
+
+//   <div id="top">
+// 	<TrialMain></TrialMain>
+//   </div>,
+//   document.getElementById('app')
+// );
+
 
 // import { Badge, Card, Chip, DataTable, Dialog, Footer, Grid, Icon, Layout, List, Snackbar, Tabs, utils } from 'react-mdl';
 _reactDom2.default.render(
@@ -48,10 +69,6 @@ _react2.default.createElement(
     _OuterLayout2.default,
     null,
     _react2.default.createElement(_TitleHeader2.default, null),
-    _react2.default.createElement(
-      _MainContent2.default,
-      null,
-      _react2.default.createElement(_TaskBar2.default, null)
-    )
+    _react2.default.createElement(_MainContent2.default, null)
   )
 ), document.getElementById('app'));

@@ -32,11 +32,120 @@ var MainContent = function (_React$Component) {
 		value: function render() {
 			return _react2.default.createElement(
 				"main",
-				{ className: "mdl-layout__content" },
+				{ className: "mdl-layout__content", id: "TrailMainId" },
 				_react2.default.createElement(
 					"div",
 					{ className: "mdl-grid", id: "pageContent" },
-					this.props.children
+					_react2.default.createElement(
+						"div",
+						{ className: "mdl-cell mdl-cell--6-col mdl-cell--6-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone mdl-cell--4-offset-desktop mdl-cell--1-offset-tablet", id: "taskBar" },
+						"Simple Textfield",
+						_react2.default.createElement(
+							"label",
+							{ className: "mdl-textfield__label", htmlFor: "sample1" },
+							"Task..."
+						)
+					),
+					_react2.default.createElement(
+						"div",
+						{ className: "mdl-cell mdl-cell--6-col mdl-cell--6-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone mdl-cell--4-offset-desktop mdl-cell--1-offset-tablet" },
+						_react2.default.createElement(
+							"div",
+							null,
+							_react2.default.createElement(
+								"button",
+								{ className: "mdl-button mdl-js-button mdl-button--raised mdl-button-custom", id: "todayButton" },
+								_react2.default.createElement(
+									"span",
+									null,
+									"Today&nbsp",
+									_react2.default.createElement("span", { className: "mdl-badge", "data-badge": "1" })
+								)
+							),
+							_react2.default.createElement(
+								"button",
+								{ className: "mdl-button mdl-js-button mdl-button--raised mdl-button-custom", disabled: true, id: "tomorrowButton" },
+								_react2.default.createElement(
+									"span",
+									null,
+									"Tomorrow&nbsp",
+									_react2.default.createElement("span", { className: "mdl-badge", "data-badge": "0" })
+								)
+							),
+							_react2.default.createElement(
+								"button",
+								{ className: "mdl-button mdl-js-button mdl-button--raised mdl-button-custom", disabled: true, id: "weekButton" },
+								_react2.default.createElement(
+									"span",
+									null,
+									"Week&nbsp",
+									_react2.default.createElement("span", { className: "mdl-badge", "data-badge": "0" })
+								)
+							)
+						)
+					),
+					_react2.default.createElement(
+						"div",
+						{ className: "mdl-cell mdl-cell--6-col mdl-cell--6-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone mdl-cell--4-offset-desktop mdl-cell--1-offset-tablet", id: "taskList" },
+						_react2.default.createElement(
+							"div",
+							{ className: "mdl-card-custom mdl-card mdl-shadow--2dp" },
+							_react2.default.createElement(
+								"div",
+								{ className: "mdl-card__supporting-text" },
+								"Test User Task Text .........."
+							),
+							_react2.default.createElement(
+								"div",
+								{ className: "mdl-card__actions mdl-card--border" },
+								_react2.default.createElement(
+									"button",
+									{ className: "mdl-button mdl-js-button mdl-button--icon mdl-button--colored button-icons", id: "doneButton" },
+									_react2.default.createElement(
+										"i",
+										{ className: "material-icons" },
+										"done"
+									)
+								),
+								_react2.default.createElement(
+									"button",
+									{ className: "mdl-button mdl-js-button mdl-button--icon mdl-button--colored button-icons", id: "deleteButton" },
+									_react2.default.createElement(
+										"i",
+										{ className: "material-icons" },
+										"delete"
+									)
+								),
+								_react2.default.createElement(
+									"button",
+									{ className: "mdl-button mdl-js-button mdl-button--icon mdl-button--colored button-icons", id: "mailButton" },
+									_react2.default.createElement(
+										"i",
+										{ className: "material-icons" },
+										"email"
+									)
+								),
+								_react2.default.createElement(
+									"span",
+									{ className: "timeStamp" },
+									"Time"
+								)
+							),
+							_react2.default.createElement(
+								"div",
+								{ className: "mdl-card__menu" },
+								_react2.default.createElement(
+									"button",
+									{ className: "mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" },
+									_react2.default.createElement(
+										"i",
+										{ className: "material-icons" },
+										"share"
+									)
+								)
+							)
+						)
+					)
 				)
 			);
 		}

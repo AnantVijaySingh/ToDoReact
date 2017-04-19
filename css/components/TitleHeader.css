@@ -1,3 +1,8 @@
+#appHeader {
+	height: 56px;
+	width: 100%;
+}
+
 #appHeader, #appHeader .mdl-layout__header {
 	background-color: #00C1A5;
 	color: #E0E4E9;

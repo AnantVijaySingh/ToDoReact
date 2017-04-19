@@ -1,10 +1,27 @@
 import React from 'react';
 
-class MainContent extends React.Component{
+class TrialMain extends React.Component{
 	render() {
-		return <main className="mdl-layout__content" id="TrailMainId">
-				  	<div className="mdl-grid" id="pageContent">
-					  <div className="mdl-cell mdl-cell--6-col mdl-cell--6-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone mdl-cell--4-offset-desktop mdl-cell--1-offset-tablet" id="taskBar">
+		return 	<div className="mdl-layout mdl-js-layout  mdl-layout--fixed-header">
+				  <header className="mdl-layout__header mdl-layout__header--transparent">
+				    <div className="mdl-layout__header-row">
+				      <span className="mdl-layout-title">Tasks To Do</span>
+				      <div className="mdl-layout-spacer"></div>
+				      <nav className="mdl-navigation">
+						<form action="#">
+						  <div className="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
+						    <label className="mdl-button mdl-js-button mdl-button--icon" htmlFor="sample6">
+						      <i className="material-icons">search</i>
+						    </label>
+						      <label className="mdl-textfield__label" htmlFor="sample-expandable">Expandable Input</label>
+						  </div>
+						</form>
+				      </nav>
+				    </div>
+				  </header>
+				  <main className="mdl-layout__content" id="TrailMainId">
+				  	<div className="mdl-grid">
+					  <div className="mdl-cell mdl-cell--6-col mdl-cell--6-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone mdl-cell--4-offset-desktop mdl-cell--1-offset-tablet">
 					  		  	Simple Textfield
 						   <label className="mdl-textfield__label" htmlFor="sample1">Task...</label>
 					   </div>
@@ -48,8 +65,9 @@ class MainContent extends React.Component{
 						</div>
 					  </div>
 					</div>
-				  </main>;
+				  </main>
+				</div>;
 	}
 }
 
-export default MainContent
+export default TrialMain

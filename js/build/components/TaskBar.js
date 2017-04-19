@@ -32,8 +32,8 @@ var TaskBar = function (_React$Component) {
 		value: function render() {
 			return _react2.default.createElement(
 				"div",
-				{ className: "mdl-cell mdl-cell--6-col mdl-cell--8-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone \r mdl-cell--2-offset-desktop mdl-cell--1-offset-tablet", id: "TaskBar" },
-				"Testing..."
+				{ className: "mdl-cell mdl-cell--6-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone \r mdl-cell--1-offset-desktop", id: "taskBar" },
+				this.props.children
 			);
 		}
 	}]);
