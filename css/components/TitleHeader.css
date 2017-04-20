@@ -1,18 +1,22 @@
 #appHeader {
 	height: 56px;
 	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 #appHeader, #appHeader .mdl-layout__header {
 	background-color: #00C1A5;
 	color: #E0E4E9;
-	font-size: 1.5em;
+/*	font-size: 1.5em;*/
 }
 
 #appHeader .mdl-layout-title {
 	font-size: 30px;
+	margin: 0px auto;
 }
 
-#appHeader .mdl-layout__header-row {
-	margin: 0px auto;
+#appHeader .mdl-layout__header-row-custom {
+	text-align: center;
 }

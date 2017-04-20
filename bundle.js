@@ -624,15 +624,19 @@ var TitleHeader = function (_React$Component) {
 				key: "render",
 				value: function render() {
 						return _react2.default.createElement(
-								"div",
-								{ className: "mdl-layout__header-row" },
+								"header",
+								{ id: "appHeader" },
 								_react2.default.createElement(
-										"span",
-										{ className: "mdl-layout-title" },
+										"div",
+										{ className: "mdl-layout__header-row-custom" },
 										_react2.default.createElement(
-												"b",
-												null,
-												"FACTUM"
+												"span",
+												{ className: "mdl-layout-title" },
+												_react2.default.createElement(
+														"b",
+														null,
+														"FACTUM"
+												)
 										)
 								)
 						);
