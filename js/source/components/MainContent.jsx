@@ -4,10 +4,7 @@ class MainContent extends React.Component{
 	render() {
 		return <main className="mdl-layout__content" id="TrailMainId">
 				  	<div className="mdl-grid" id="pageContent">
-					  <div className="mdl-cell mdl-cell--6-col mdl-cell--6-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone mdl-cell--4-offset-desktop mdl-cell--1-offset-tablet" id="taskBar">
-					  		  	Simple Textfield
-						   <label className="mdl-textfield__label" htmlFor="sample1">Task...</label>
-					   </div>
+						{this.props.children}
 					   <div className="mdl-cell mdl-cell--6-col mdl-cell--6-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone mdl-cell--4-offset-desktop mdl-cell--1-offset-tablet">
 					   		<div>
 								<button className="mdl-button mdl-js-button mdl-button--raised mdl-button-custom" id="todayButton">

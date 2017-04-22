@@ -252,7 +252,15 @@ _react2.default.createElement(
     _OuterLayout2.default,
     null,
     _react2.default.createElement(_TitleHeader2.default, null),
-    _react2.default.createElement(_MainContent2.default, null)
+    _react2.default.createElement(
+      _MainContent2.default,
+      null,
+      _react2.default.createElement(
+        _TaskBar2.default,
+        null,
+        _react2.default.createElement(_TaskTextBar2.default, null)
+      )
+    )
   )
 ), document.getElementById('app'));
 },{"./components/Logo":3,"./components/MainContent":4,"./components/OuterLayout":5,"./components/TaskBar":6,"./components/TaskTextBar":7,"./components/TitleHeader":8,"./components/TrialMain":9,"./components/material":10,"react":191,"react-dom":11}],3:[function(require,module,exports){
@@ -335,16 +343,7 @@ var MainContent = function (_React$Component) {
 				_react2.default.createElement(
 					"div",
 					{ className: "mdl-grid", id: "pageContent" },
-					_react2.default.createElement(
-						"div",
-						{ className: "mdl-cell mdl-cell--6-col mdl-cell--6-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone mdl-cell--4-offset-desktop mdl-cell--1-offset-tablet", id: "taskBar" },
-						"Simple Textfield",
-						_react2.default.createElement(
-							"label",
-							{ className: "mdl-textfield__label", htmlFor: "sample1" },
-							"Task..."
-						)
-					),
+					this.props.children,
 					_react2.default.createElement(
 						"div",
 						{ className: "mdl-cell mdl-cell--6-col mdl-cell--6-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone mdl-cell--4-offset-desktop mdl-cell--1-offset-tablet" },
@@ -535,8 +534,13 @@ var TaskBar = function (_React$Component) {
 		value: function render() {
 			return _react2.default.createElement(
 				"div",
-				{ className: "mdl-cell mdl-cell--6-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone \r mdl-cell--1-offset-desktop", id: "taskBar" },
-				this.props.children
+				{ className: "mdl-cell mdl-cell--6-col mdl-cell--6-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone mdl-cell--4-offset-desktop mdl-cell--1-offset-tablet", id: "taskBar" },
+				this.props.children,
+				_react2.default.createElement(
+					"label",
+					{ className: "mdl-textfield__label", htmlFor: "sample1" },
+					"Task..."
+				)
 			);
 		}
 	}]);
@@ -546,7 +550,7 @@ var TaskBar = function (_React$Component) {
 
 exports.default = TaskBar;
 },{"react":191}],7:[function(require,module,exports){
-'use strict';
+"use strict";
 
 Object.defineProperty(exports, "__esModule", {
 	value: true
@@ -554,7 +558,7 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = require('react');
+var _react = require("react");
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -576,12 +580,12 @@ var TaskTextBar = function (_React$Component) {
 	}
 
 	_createClass(TaskTextBar, [{
-		key: 'render',
+		key: "render",
 		value: function render() {
 			return _react2.default.createElement(
-				'textarea',
-				null,
-				'Task . . .'
+				"textarea",
+				{ className: "mdl-textfield mdl-textfield__input" },
+				"Task . . ."
 			);
 		}
 	}]);

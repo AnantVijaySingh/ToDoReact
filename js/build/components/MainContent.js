@@ -36,16 +36,7 @@ var MainContent = function (_React$Component) {
 				_react2.default.createElement(
 					"div",
 					{ className: "mdl-grid", id: "pageContent" },
-					_react2.default.createElement(
-						"div",
-						{ className: "mdl-cell mdl-cell--6-col mdl-cell--6-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone mdl-cell--4-offset-desktop mdl-cell--1-offset-tablet", id: "taskBar" },
-						"Simple Textfield",
-						_react2.default.createElement(
-							"label",
-							{ className: "mdl-textfield__label", htmlFor: "sample1" },
-							"Task..."
-						)
-					),
+					this.props.children,
 					_react2.default.createElement(
 						"div",
 						{ className: "mdl-cell mdl-cell--6-col mdl-cell--6-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone mdl-cell--4-offset-desktop mdl-cell--1-offset-tablet" },

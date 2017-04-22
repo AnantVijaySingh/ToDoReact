@@ -35,7 +35,11 @@ ReactDOM.render(
   <div id="top">
   	<OuterLayout>
   		<TitleHeader></TitleHeader>
-  		<MainContent></MainContent>
+  		<MainContent>
+        <TaskBar>
+          <TaskTextBar></TaskTextBar>
+        </TaskBar>  
+      </MainContent>
   	</OuterLayout>
   </div>,
   document.getElementById('app')

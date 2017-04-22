@@ -32,8 +32,13 @@ var TaskBar = function (_React$Component) {
 		value: function render() {
 			return _react2.default.createElement(
 				"div",
-				{ className: "mdl-cell mdl-cell--6-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone \r mdl-cell--1-offset-desktop", id: "taskBar" },
-				this.props.children
+				{ className: "mdl-cell mdl-cell--6-col mdl-cell--6-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone mdl-cell--4-offset-desktop mdl-cell--1-offset-tablet", id: "taskBar" },
+				this.props.children,
+				_react2.default.createElement(
+					"label",
+					{ className: "mdl-textfield__label", htmlFor: "sample1" },
+					"Task..."
+				)
 			);
 		}
 	}]);

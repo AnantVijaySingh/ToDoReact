@@ -69,6 +69,14 @@ _react2.default.createElement(
     _OuterLayout2.default,
     null,
     _react2.default.createElement(_TitleHeader2.default, null),
-    _react2.default.createElement(_MainContent2.default, null)
+    _react2.default.createElement(
+      _MainContent2.default,
+      null,
+      _react2.default.createElement(
+        _TaskBar2.default,
+        null,
+        _react2.default.createElement(_TaskTextBar2.default, null)
+      )
+    )
   )
 ), document.getElementById('app'));
