@@ -31,9 +31,17 @@ var TaskTextBar = function (_React$Component) {
 		key: "render",
 		value: function render() {
 			return _react2.default.createElement(
-				"textarea",
-				{ className: "mdl-textfield mdl-textfield__input" },
-				"Task . . ."
+				"div",
+				{ className: "mdl-card-taskBar mdl-shadow--2dp", id: "taskTextBar" },
+				_react2.default.createElement(
+					"div",
+					null,
+					_react2.default.createElement(
+						"textarea",
+						{ className: "mdl-textfield mdl-textfield__input", rows: "1" },
+						"Task . . ."
+					)
+				)
 			);
 		}
 	}]);

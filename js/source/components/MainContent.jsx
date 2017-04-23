@@ -5,7 +5,7 @@ class MainContent extends React.Component{
 		return <main className="mdl-layout__content" id="TrailMainId">
 				  	<div className="mdl-grid" id="pageContent">
 						{this.props.children}
-					   <div className="mdl-cell mdl-cell--6-col mdl-cell--6-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone mdl-cell--4-offset-desktop mdl-cell--1-offset-tablet">
+					   <div className="mdl-cell mdl-cell--7-col mdl-cell--7-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone mdl-cell--1-offset-desktop mdl-cell--1-offset-tablet">
 					   		<div>
 								<button className="mdl-button mdl-js-button mdl-button--raised mdl-button-custom" id="todayButton">
 								  <span>Today&nbsp<span className="mdl-badge" data-badge="1"></span></span>
@@ -18,7 +18,7 @@ class MainContent extends React.Component{
 								</button>
 							</div>
 					  </div>
-					  <div className="mdl-cell mdl-cell--6-col mdl-cell--6-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone mdl-cell--4-offset-desktop mdl-cell--1-offset-tablet" id="taskList">
+					  <div className="mdl-cell mdl-cell--7-col mdl-cell--7-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone mdl-cell--1-offset-desktop mdl-cell--1-offset-tablet" id="taskList">
 						<div className="mdl-card-custom mdl-card mdl-shadow--2dp">
 						  <div className="mdl-card__supporting-text">
 						    Test User Task Text ..........

@@ -346,7 +346,7 @@ var MainContent = function (_React$Component) {
 					this.props.children,
 					_react2.default.createElement(
 						"div",
-						{ className: "mdl-cell mdl-cell--6-col mdl-cell--6-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone mdl-cell--4-offset-desktop mdl-cell--1-offset-tablet" },
+						{ className: "mdl-cell mdl-cell--7-col mdl-cell--7-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone mdl-cell--1-offset-desktop mdl-cell--1-offset-tablet" },
 						_react2.default.createElement(
 							"div",
 							null,
@@ -384,7 +384,7 @@ var MainContent = function (_React$Component) {
 					),
 					_react2.default.createElement(
 						"div",
-						{ className: "mdl-cell mdl-cell--6-col mdl-cell--6-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone mdl-cell--4-offset-desktop mdl-cell--1-offset-tablet", id: "taskList" },
+						{ className: "mdl-cell mdl-cell--7-col mdl-cell--7-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone mdl-cell--1-offset-desktop mdl-cell--1-offset-tablet", id: "taskList" },
 						_react2.default.createElement(
 							"div",
 							{ className: "mdl-card-custom mdl-card mdl-shadow--2dp" },
@@ -534,13 +534,8 @@ var TaskBar = function (_React$Component) {
 		value: function render() {
 			return _react2.default.createElement(
 				"div",
-				{ className: "mdl-cell mdl-cell--6-col mdl-cell--6-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone mdl-cell--4-offset-desktop mdl-cell--1-offset-tablet", id: "taskBar" },
-				this.props.children,
-				_react2.default.createElement(
-					"label",
-					{ className: "mdl-textfield__label", htmlFor: "sample1" },
-					"Task..."
-				)
+				{ className: "mdl-cell mdl-cell--7-col mdl-cell--7-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone mdl-cell--1-offset-desktop mdl-cell--1-offset-tablet", id: "taskBar" },
+				this.props.children
 			);
 		}
 	}]);
@@ -583,9 +578,17 @@ var TaskTextBar = function (_React$Component) {
 		key: "render",
 		value: function render() {
 			return _react2.default.createElement(
-				"textarea",
-				{ className: "mdl-textfield mdl-textfield__input" },
-				"Task . . ."
+				"div",
+				{ className: "mdl-card-taskBar mdl-shadow--2dp", id: "taskTextBar" },
+				_react2.default.createElement(
+					"div",
+					null,
+					_react2.default.createElement(
+						"textarea",
+						{ className: "mdl-textfield mdl-textfield__input", rows: "1" },
+						"Task . . ."
+					)
+				)
 			);
 		}
 	}]);

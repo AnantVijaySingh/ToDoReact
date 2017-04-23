@@ -39,7 +39,7 @@ var MainContent = function (_React$Component) {
 					this.props.children,
 					_react2.default.createElement(
 						"div",
-						{ className: "mdl-cell mdl-cell--6-col mdl-cell--6-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone mdl-cell--4-offset-desktop mdl-cell--1-offset-tablet" },
+						{ className: "mdl-cell mdl-cell--7-col mdl-cell--7-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone mdl-cell--1-offset-desktop mdl-cell--1-offset-tablet" },
 						_react2.default.createElement(
 							"div",
 							null,
@@ -77,7 +77,7 @@ var MainContent = function (_React$Component) {
 					),
 					_react2.default.createElement(
 						"div",
-						{ className: "mdl-cell mdl-cell--6-col mdl-cell--6-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone mdl-cell--4-offset-desktop mdl-cell--1-offset-tablet", id: "taskList" },
+						{ className: "mdl-cell mdl-cell--7-col mdl-cell--7-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone mdl-cell--1-offset-desktop mdl-cell--1-offset-tablet", id: "taskList" },
 						_react2.default.createElement(
 							"div",
 							{ className: "mdl-card-custom mdl-card mdl-shadow--2dp" },

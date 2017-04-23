@@ -18,7 +18,58 @@
 	padding: 0px 40px 0px 40px;
 }/*#taskBar {
 	border: 1px solid black;
-}*/#appHeader {
+}*/.mdl-card-taskBar {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 16px;
+  font-weight: 400;
+  height: 30px;
+  overflow: hidden;
+  width: 100%;
+  z-index: 1;
+  position: relative;
+  background: rgb(255,255,255);
+  border-radius: 2px;
+  box-sizing: border-box; 
+
+ /* text-align: center;*/
+  /*vertical-align: center;*/
+}
+
+.mdl-card-taskBar div {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+#taskTextBar textarea{
+  border: none;
+  overflow: auto;
+  outline: none;
+  resize: none;
+
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+
+  display:inline-block;
+  vertical-align:middle;
+}
+
+#taskTextBar .mdl-textfield{
+	position: relative;
+	font-size: 16px;
+	display: inline-block;
+	box-sizing: border-box;
+	width: 100%;
+	margin: 0px auto;
+	padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 2px;
+}#appHeader {
 	height: 56px;
 	width: 100%;
 	display: flex;
